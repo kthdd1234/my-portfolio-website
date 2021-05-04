@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
-import { withRouter } from 'react-router-dom';
-import { Button } from 'antd';
-import './Projects.css';
+import ProjectImage from './ProjectImage';
+import ProjectContents from './ProjectContents';
 
 const projectList = {
   team_project: [
@@ -42,51 +41,6 @@ const projectList = {
   ],
 };
 
-const ProjectButton = ({ path, history }) => {
-  return (
-    <Button
-      style={{
-        color: '#1890ff',
-        fontWeight: 'bold',
-        borderRadius: 5,
-      }}
-      type='primary'
-      size='large'
-      ghost={true}
-      onClick={() => history.push(`/projects/${path}`)}
-    >
-      프로젝트 보기 →
-    </Button>
-  );
-};
-
-const ProjectsHead = () => {
-  return (
-    <div className='projects_head'>
-      <span className='projects_head_title'>PROJECTS</span>
-    </div>
-  );
-};
-
-const ProjectImage = ({ kind, img }) => {
-  return (
-    <div className={`projects_list_project_${kind}_wrap`}>
-      <img className='projects_list_project_wrap_img' src={img} alt='img' />
-    </div>
-  );
-};
-
-const ProjectContents = ({ name, unit, path, history }) => {
-  return (
-    <div className='projects_list_project_contents'>
-      <div className='projects_list_project_contents_name'>{name}</div>
-
-      <div className='projects_list_project_contents_pos'>{unit}</div>
-      <ProjectButton path={path} history={history} />
-    </div>
-  );
-};
-
 const observeFunc = (projectsList) => {
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(
@@ -105,7 +59,7 @@ const observeFunc = (projectsList) => {
   return observer;
 };
 
-const ProjectsList = ({ history }) => {
+const ProjectList = ({ history }) => {
   useEffect(() => {
     const team_project_observer = window.document.querySelector(
       '.projects_list_team-project'
@@ -150,13 +104,4 @@ const ProjectsList = ({ history }) => {
   );
 };
 
-const Projects = ({ history }) => {
-  return (
-    <div id='projects' className='projects_container'>
-      <ProjectsHead />
-      <ProjectsList history={history} />
-    </div>
-  );
-};
-
-export default withRouter(Projects);
+export default ProjectList;

@@ -1,17 +1,4 @@
 import { useEffect } from 'react';
-import './About.css';
-
-const MyPhoto = () => {
-  return (
-    <div className='photo-container'>
-      <img
-        src='https://kimdonghyun-portfolio-image.s3.ap-northeast-2.amazonaws.com/myPhoto.jpg'
-        className='photo'
-        alt='img'
-      />
-    </div>
-  );
-};
 
 const AboutMe = () => {
   useEffect(() => {
@@ -57,15 +44,4 @@ const AboutMe = () => {
   );
 };
 
-const About = () => {
-  return (
-    <div id='about' className='about-container'>
-      <div className='about-wrap'>
-        <AboutMe />
-        <MyPhoto />
-      </div>
-    </div>
-  );
-};
-
-export default About;
+export default AboutMe;

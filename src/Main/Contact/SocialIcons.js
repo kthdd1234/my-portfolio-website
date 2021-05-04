@@ -1,21 +1,4 @@
 import { BoldOutlined, MailOutlined, GithubOutlined } from '@ant-design/icons';
-import './Contact.css';
-
-const MyPhoneNumber = () => {
-  return <div className='my-phone-number'>+82 10-2455-3704</div>;
-};
-
-const ContactHeading = () => {
-  return (
-    <div className='heading-box'>
-      <span className='heading-contact'>Contact</span>
-    </div>
-  );
-};
-
-const ClosingGreeting = () => {
-  return <div className='closing-greeting'>Thank you! Have a nice day :)</div>;
-};
 
 const SocialIcons = () => {
   return (
@@ -41,17 +24,4 @@ const SocialIcons = () => {
   );
 };
 
-const Contact = () => {
-  return (
-    <div id='contact' className='contact-container'>
-      <div className='contact-wrapper'>
-        <ContactHeading />
-        <ClosingGreeting />
-        <SocialIcons />
-        <MyPhoneNumber />
-      </div>
-    </div>
-  );
-};
-
-export default Contact;
+export default SocialIcons;

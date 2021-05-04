@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Button } from 'antd';
 import './index.css';
-import '../Main/Home.css';
+import '../Main/Home/index.css';
 
 export const ProjectsHeaderBar = ({ history, next_path }) => {
   useEffect(() => {

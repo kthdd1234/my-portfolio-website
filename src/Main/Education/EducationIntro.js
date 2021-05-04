@@ -1,26 +1,4 @@
 import { useEffect } from 'react';
-import './Education.css';
-
-const DecorBottom = () => {
-  return (
-    <img
-      className='decor-bottom'
-      src='https://assets.website-files.com/5e56267ff063d5bd8357b5ee/5e562680e45560e05b9e13b5_decor-v1-haze.svg'
-    />
-  );
-};
-
-const CodeStateLogo = () => {
-  return (
-    <div className='codeStateLogo-container'>
-      <img
-        src='https://kimdonghyun-portfolio-image.s3.ap-northeast-2.amazonaws.com/codestates.png'
-        className='codeStateLogo'
-        alt='img'
-      />
-    </div>
-  );
-};
 
 const EducationIntro = () => {
   useEffect(() => {
@@ -87,16 +65,4 @@ const EducationIntro = () => {
   );
 };
 
-const Education = () => {
-  return (
-    <div id='education' className='education-container'>
-      <div className='education-wrap'>
-        <CodeStateLogo />
-        <EducationIntro />
-      </div>
-      <DecorBottom />
-    </div>
-  );
-};
-
-export default Education;
+export default EducationIntro;

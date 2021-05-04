@@ -1,3 +1,5 @@
+$fontWeightBold: bold;
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -9,7 +11,7 @@ body {
   width: 10vw;
   height: 3.5vw;
   font-size: 1.2vw;
-  font-weight: bold;
+  font-weight: $fontWeightBold;
 }
 
 @media screen and (max-width: 900px) {
@@ -17,8 +19,7 @@ body {
     width: 6rem;
     height: 2rem;
     font-size: 0.7rem;
-    font-weight: bold;
+    font-weight: $fontWeightBold;
     margin-left: 10px;
   }
 }
-/*# sourceMappingURL=index.css.map */
