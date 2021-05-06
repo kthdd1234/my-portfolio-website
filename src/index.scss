@@ -1,25 +1,70 @@
-$fontWeightBold: bold;
+$position-relative: relative;
+$position-absolute: absolute;
+$color-whitesmoke: whitesmoke;
+$color-ffa949: #ffa949;
+$color-202a45: #202a45;
+$width-100-percent: 100%;
+$height-100-percent: 100%;
+$text-align-center: center;
+$font-weight-bold: bold;
+$font-family-mix: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+  sans-serif;
+$font-family-mix2: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-family-mix3: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+@mixin filter($percent) {
+  filter: brightness($percent);
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin layoutCenter($color, $top, $bottom) {
+  background-color: $color;
+  position: $position-relative;
+  padding: {
+    top: $top;
+    bottom: $bottom;
+  }
+  @include flexCenter();
+}
+
+@mixin positionSetting() {
+  position: $position-relative;
+  opacity: 0;
+  left: 50px;
+}
+
+@mixin titleSetting() {
+  font: {
+    weight: 900;
+    size: 2.4rem;
+    family: sans-serif;
+  }
+  letter-spacing: 1.5px;
+  border-bottom: 5px solid $color-ffa949;
+}
+
+@mixin contentsSetting($color) {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  font-family: $font-family-mix;
+  color: $color;
+}
+
+@mixin media($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+}
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
-}
-
-.learn-more-btn {
-  width: 10vw;
-  height: 3.5vw;
-  font-size: 1.2vw;
-  font-weight: $fontWeightBold;
-}
-
-@media screen and (max-width: 900px) {
-  .learn-more-btn {
-    width: 6rem;
-    height: 2rem;
-    font-size: 0.7rem;
-    font-weight: $fontWeightBold;
-    margin-left: 10px;
-  }
 }

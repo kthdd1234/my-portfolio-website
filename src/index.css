@@ -4,21 +4,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
 }
-
-.learn-more-btn {
-  width: 10vw;
-  height: 3.5vw;
-  font-size: 1.2vw;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 900px) {
-  .learn-more-btn {
-    width: 6rem;
-    height: 2rem;
-    font-size: 0.7rem;
-    font-weight: bold;
-    margin-left: 10px;
-  }
-}
 /*# sourceMappingURL=index.css.map */

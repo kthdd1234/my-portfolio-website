@@ -1,0 +1,91 @@
+@import '../../index';
+
+@mixin padding($top, $bottom) {
+  padding: {
+    top: $top;
+    bottom: $bottom;
+  }
+}
+
+.about {
+  @include layoutCenter($color-whitesmoke, 130px, 130px);
+
+  @include media(900px) {
+    @include padding(90px, 90px);
+  }
+
+  @include media(700px) {
+    @include padding(80px, 80px);
+  }
+
+  @include media(630px) {
+    @include padding(70px, 70px);
+  }
+
+  @include media(570px) {
+    @include padding(60px, 60px);
+  }
+
+  &-me {
+    @include positionSetting();
+
+    &-sub {
+      @include media(570px) {
+        text-align: $text-align-center;
+      }
+
+      &-title {
+        @include titleSetting();
+
+        @include media(900px) {
+          font-size: 2.2rem;
+        }
+
+        @include media(700px) {
+          font-size: 1.5rem;
+        }
+
+        @include media(630px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &-contents {
+      @include contentsSetting(gray);
+
+      @include media(900px) {
+        font-size: 1.1rem;
+        margin-top: 30px;
+      }
+
+      @include media(700px) {
+        font-size: 1rem;
+      }
+
+      @include media(630px) {
+        font-size: 0.9rem;
+      }
+
+      @include media(570px) {
+        font-size: 0.8rem;
+        text-align: $text-align-center;
+      }
+    }
+  }
+
+  &-photo {
+    position: $position-relative;
+    margin-top: 40px;
+
+    &-img {
+      width: 320px;
+      border-radius: 300px;
+      margin-left: 100px;
+
+      @include media(1200px) {
+        display: none;
+      }
+    }
+  }
+}

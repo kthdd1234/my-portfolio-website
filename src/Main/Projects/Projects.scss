@@ -1,0 +1,135 @@
+@import '../../index';
+
+@mixin opecitySetting {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+$color-gray: gray;
+$breakPoint: 1500px;
+$width-web: 62rem;
+
+.projects {
+  background-color: #f3f3f7;
+  padding: {
+    top: 140px;
+    bottom: 140px;
+  }
+
+  @include media($breakPoint - 580px) {
+    padding: {
+      top: 80px;
+      bottom: 80px;
+    }
+  }
+
+  &-sub {
+    text-align: $text-align-center;
+    margin-bottom: 5rem;
+
+    &-title {
+      @include titleSetting();
+
+      @include media($breakPoint - 580px) {
+        font-size: 1.5rem;
+      }
+
+      @include media($breakPoint - 870px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &-team {
+    @include opecitySetting();
+
+    @include media($breakPoint - 410px) {
+      margin-bottom: 3rem;
+    }
+
+    @include media($breakPoint - 580px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-personal {
+    @include opecitySetting();
+
+    @include media($breakPoint - 580px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-project {
+    margin: 3rem;
+
+    @include media($breakPoint) {
+      margin: 2rem;
+    }
+
+    @include media($breakPoint - 200px) {
+      margin: 1rem;
+    }
+
+    &-web {
+      width: $width-web;
+
+      @include media($breakPoint) {
+        width: $width-web - 10rem;
+      }
+
+      @include media($breakPoint - 200px) {
+        width: $width-web - 20rem;
+      }
+
+      @include media($breakPoint - 410px) {
+        width: $width-web - 30rem;
+      }
+
+      @include media($breakPoint - 580px) {
+        width: $width-web - 41.5rem;
+      }
+    }
+
+    &-app {
+      width: 20rem;
+    }
+
+    &-img {
+      width: $width-100-percent;
+      border-radius: 10px;
+      box-shadow: 0 12px 24px 0 rgba(48, 54, 77, 0.5);
+    }
+
+    &-contents {
+      padding: {
+        top: 10px;
+        left: 5px;
+      }
+
+      &-name {
+        font: {
+          weight: 700;
+          size: 2.05rem;
+        }
+
+        @include media($breakPoint - 580px) {
+          font-size: 1.7rem;
+        }
+      }
+
+      &-pos {
+        font-size: large;
+        padding-bottom: 5px;
+        color: $color-gray;
+
+        @include media($breakPoint - 580px) {
+          font-size: 1rem;
+          padding-bottom: 5px;
+          color: $color-gray;
+        }
+      }
+    }
+  }
+}

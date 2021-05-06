@@ -1,5 +1,5 @@
 import { Switch, Route } from 'react-router-dom';
-import Main from './Main';
+import Main from './Main/Main';
 import SFcinemaWeb from './ProjectSection/SFcinemaWeb';
 import SFcinemaApp from './ProjectSection/SFcinemaApp';
 import Meetyou from './ProjectSection/Meetyou';

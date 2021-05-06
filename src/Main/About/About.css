@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+
+.about {
+  background-color: whitesmoke;
+  position: relative;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .about {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.about-me {
+  position: relative;
+  opacity: 0;
+  left: 50px;
+}
+
+@media screen and (max-width: 570px) {
+  .about-me-sub {
+    text-align: center;
+  }
+}
+
+.about-me-sub-title {
+  font-weight: 900;
+  font-size: 2.4rem;
+  font-family: sans-serif;
+  letter-spacing: 1.5px;
+  border-bottom: 5px solid #ffa949;
+}
+
+@media screen and (max-width: 900px) {
+  .about-me-sub-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-me-sub-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .about-me-sub-title {
+    font-size: 1.4rem;
+  }
+}
+
+.about-me-contents {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: gray;
+}
+
+@media screen and (max-width: 900px) {
+  .about-me-contents {
+    font-size: 1.1rem;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-me-contents {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .about-me-contents {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .about-me-contents {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+.about-photo {
+  position: relative;
+  margin-top: 40px;
+}
+
+.about-photo-img {
+  width: 320px;
+  border-radius: 300px;
+  margin-left: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about-photo-img {
+    display: none;
+  }
+}
+/*# sourceMappingURL=About.css.map */

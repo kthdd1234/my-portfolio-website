@@ -1,0 +1,108 @@
+@import '../../index';
+
+.home {
+  position: $position-relative;
+  background-color: $color-whitesmoke;
+
+  &-navbar {
+    position: fixed;
+    width: $width-100-percent;
+    padding-top: 20px;
+    color: $color-whitesmoke;
+    font: {
+      weight: $font-weight-bold;
+      family: $font-family-mix2;
+    }
+    z-index: 2;
+
+    &-list {
+      @include flexCenter();
+      list-style: none;
+
+      &-item {
+        margin-right: 20px;
+        font-size: 0.8rem;
+        letter-spacing: 2.5px;
+        cursor: pointer;
+
+        @include media(900px) {
+          font-size: 0.5rem;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  &-video {
+    position: $position-relative;
+    width: $width-100-percent;
+    height: $height-100-percent;
+    @include filter(60%);
+  }
+
+  &-intro {
+    position: $position-absolute;
+    top: 35%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &-me1 {
+      margin-bottom: 10px;
+      color: $color-whitesmoke;
+      font: {
+        size: 4.5rem;
+        family: $font-family-mix;
+        weight: $font-weight-bold;
+      }
+      text-align: $text-align-center;
+
+      @include media(1800px) {
+        font-size: 3.5rem;
+      }
+
+      @include media(1200px) {
+        font-size: 2.8rem;
+      }
+
+      @include media(900px) {
+        font-size: 2.1rem;
+      }
+
+      @include media(700px) {
+        font-size: 1.7rem;
+      }
+    }
+
+    &-me2 {
+      color: $color-whitesmoke;
+      font: {
+        size: 1.2rem;
+        family: $font-family-mix;
+      }
+      text-align: $text-align-center;
+
+      @include media(1800px) {
+        font-size: 1.1rem;
+      }
+
+      @include media(1200px) {
+        color: $color-whitesmoke;
+        font-size: 1rem;
+        text-align: $text-align-center;
+      }
+
+      @include media(700px) {
+        color: $color-whitesmoke;
+        font-size: 0.9rem;
+        text-align: $text-align-center;
+      }
+
+      &-mid {
+        @include media(900px) {
+          display: block;
+        }
+      }
+    }
+  }
+}

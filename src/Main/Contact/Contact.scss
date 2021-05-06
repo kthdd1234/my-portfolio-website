@@ -1,0 +1,92 @@
+@import '../../index';
+
+.contact {
+  background-color: $color-202a45;
+  padding: {
+    top: 100px;
+    bottom: 100px;
+  }
+
+  @include media(700px) {
+    padding: {
+      top: 80px;
+      bottom: 80px;
+    }
+  }
+
+  &-sub {
+    text-align: $text-align-center;
+    margin-bottom: 30px;
+
+    @include media(700px) {
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      @include titleSetting();
+      color: whitesmoke;
+
+      @include media(900px) {
+        font-size: 2.2rem;
+      }
+
+      @include media(700px) {
+        font-size: 1.5rem;
+      }
+
+      @include media(630px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &-closing-greeting {
+    color: $color-whitesmoke;
+    font-size: 1.45rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: $text-align-center;
+
+    @include media(900px) {
+      font-size: 1.3rem;
+    }
+
+    @include media(700px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &-icons {
+    @include flexCenter();
+    width: $width-100-percent;
+    margin-top: 30px;
+
+    &-icon {
+      margin: {
+        left: 50px;
+        right: 50px;
+      }
+      color: gray;
+      font-size: 35px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      @include media(630px) {
+        font-size: 1.7rem;
+        margin: {
+          left: 35px;
+          right: 35px;
+        }
+      }
+    }
+  }
+
+  &-phone-number {
+    margin-top: 30px;
+    color: darkgray;
+    font-size: 1.2rem;
+    text-align: $text-align-center;
+  }
+}

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { Button } from 'antd';
+import 'antd/dist/antd.css';
 import './index.css';
-import '../Main/Home/index.css';
+import '../Main/Home/Home.css';
 
 export const ProjectsHeaderBar = ({ history, next_path }) => {
   useEffect(() => {
@@ -22,7 +23,7 @@ export const ProjectsHeaderBar = ({ history, next_path }) => {
   }, []);
 
   return (
-    <div className='header-bar-container project-detail-header'>
+    <div className='nav-bar project-detail-header'>
       <div className='header-flex-box'>
         <div className='header-home' onClick={() => history.push('/')}>
           HOME
