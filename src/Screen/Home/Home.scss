@@ -34,10 +34,7 @@
   }
 
   &-video {
-    position: $position-relative;
-    width: $width-100-percent;
-    height: $height-100-percent;
-    @include filter(60%);
+    @include backgroundSetting(60%);
   }
 
   &-intro {

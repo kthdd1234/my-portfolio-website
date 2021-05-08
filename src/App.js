@@ -1,12 +1,12 @@
 import { Switch, Route } from 'react-router-dom';
-import Main from './Main/Main';
-import SFcinemaWeb from './ProjectSection/SFcinemaWeb';
-import SFcinemaApp from './ProjectSection/SFcinemaApp';
-import Meetyou from './ProjectSection/Meetyou';
-import Yourtube from './ProjectSection/Yourtube';
+import Screen from './Screen/Screen';
+import SFcinemaWeb from './Screen/Projects/page/pages/SFcinemaWeb';
+import SFcinemaApp from './Screen/Projects/page/pages/SFcinemaApp';
+import Meetyou from './Screen/Projects/page/pages/Meetyou';
+import Yourtube from './Screen/Projects/page/pages/Yourtube';
 
 const list = [
-  { path: '/', component: Main },
+  { path: '/', component: Screen },
   { path: '/projects/sf-cinema-web', component: SFcinemaWeb },
   { path: '/projects/sf-cinema-app', component: SFcinemaApp },
   { path: '/projects/meet-you', component: Meetyou },

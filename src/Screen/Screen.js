@@ -1,10 +1,10 @@
 import Home from './Home/Home';
 import About from './About/About';
 import Education from './Education/Education';
-import Projects from './Projects/Projects';
+import Projects from './Projects/projects/Projects';
 import Contact from './Contact/Contact';
 
-const Main = ({ history }) => {
+const Screen = ({ history }) => {
   return (
     <div>
       <Home />
@@ -16,4 +16,4 @@ const Main = ({ history }) => {
   );
 };
 
-export default Main;
+export default Screen;

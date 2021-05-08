@@ -1,0 +1,116 @@
+@import '../../index';
+
+.education {
+  @include layoutCenter($color-202a45, 140px, 140px);
+
+  @include media(700px) {
+    @include padding(80px, 80px);
+  }
+
+  &-codestate {
+    background-color: $color-whitesmoke;
+    border-radius: 5px;
+    margin-right: 100px;
+
+    @include media(1200px) {
+      margin-right: 0;
+    }
+
+    &-img {
+      width: 300px;
+      padding: 20px;
+    }
+
+    @include media(1200px) {
+      display: none;
+    }
+  }
+
+  &-intro {
+    @include positionSetting();
+
+    &-sub {
+      @include media(570px) {
+        text-align: $text-align-center;
+      }
+
+      &-title {
+        color: $color-whitesmoke;
+        @include titleSetting();
+
+        @include media(900px) {
+          font-size: 2.2rem;
+        }
+
+        @include media(700px) {
+          font-size: 1.5rem;
+        }
+
+        @include media(630px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &-contents {
+      @include contentsSetting($color-whitesmoke);
+
+      @include media(900px) {
+        font-size: 1.1rem;
+        margin-top: 30px;
+      }
+
+      @include media(700px) {
+        font-size: 1rem;
+      }
+
+      @include media(630px) {
+        font-size: 0.9rem;
+      }
+
+      @include media(570px) {
+        font-size: 0.8rem;
+        text-align: $text-align-center;
+      }
+
+      &-course {
+        font-family: $font-family-mix3;
+      }
+
+      &-stacks {
+        font-family: $font-family-mix3;
+        color: $color-ffa949;
+      }
+
+      &-skills {
+        color: $color-ffa949;
+      }
+
+      &-link {
+        margin-top: 20px;
+        color: darkgray;
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:hover {
+          color: dodgerblue;
+        }
+      }
+    }
+  }
+
+  .decor-bottom {
+    position: $position-absolute;
+    width: $width-100-percent;
+    height: 4vw;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    z-index: 1;
+
+    @include media(570px) {
+      bottom: 0px;
+    }
+  }
+}

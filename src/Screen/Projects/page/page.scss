@@ -1,0 +1,199 @@
+@import '../../../index.scss';
+
+@mixin justifySetting($pos, $justify) {
+  position: $pos;
+  display: flex;
+  justify-content: $justify;
+}
+
+.project-navbar {
+  @include justifySetting(none, space-between);
+  z-index: 1;
+  padding: {
+    right: 3rem;
+    bottom: 1rem;
+    left: 3rem;
+  }
+
+  &-item {
+    font-size: 1rem;
+    letter-spacing: 2.5px;
+    cursor: pointer;
+  }
+}
+
+.project {
+  @include justifySetting($position-relative, center);
+
+  &-background {
+    @include backgroundSetting(60%);
+  }
+
+  &-intro {
+    position: absolute;
+    top: 35%;
+
+    &-head {
+      @include justifySetting(none, space-between);
+
+      &-img {
+      }
+    }
+
+    &-desc {
+      margin-bottom: 2vw;
+      color: whitesmoke;
+      font: {
+        size: 3.6rem;
+        weight: 700;
+        family: $font-family-mix;
+      }
+
+      &-sf {
+        font-weight: normal;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+      }
+
+      &-tomato {
+        color: tomato;
+      }
+    }
+
+    &-contents {
+      display: flex;
+
+      &-list {
+        flex: 1 1 0%;
+
+        &-title {
+          color: whitesmoke;
+          font-size: 1.5vw;
+          font-weight: 700;
+        }
+
+        &-stack {
+          color: #e4ddd1;
+          font-size: 1.2vw;
+        }
+      }
+    }
+  }
+
+  &-gif {
+    @include padding(6rem, 6rem);
+    text-align: center;
+
+    &-title {
+      @include titleSetting();
+      color: whitesmoke;
+    }
+
+    &-wrap {
+      margin-top: 2vw;
+
+      &-img {
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .learn-more-btn {
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .projects-desc {
+    font-size: 3rem;
+  }
+  .projects-logo {
+    width: 12rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .projects-desc {
+    font-size: 2.5rem;
+  }
+  .projects-logo {
+    width: 12rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .projects-desc {
+    font-size: 2.3rem;
+  }
+  .projects-logo {
+    width: 9rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .projects-desc {
+    font-size: 2rem;
+  }
+  .projects-logo {
+    width: 8rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .projects-desc {
+    font-size: 1.5rem;
+  }
+  .projects-logo {
+    width: 7rem;
+  }
+  .project-gif-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .projects-desc {
+    font-size: 1.2rem;
+  }
+  .projects-logo {
+    width: 6rem;
+  }
+  .project-gif-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projects-desc {
+    font-size: 0.9rem;
+  }
+  .projects-logo {
+    width: 5rem;
+  }
+
+  .project-navbar-home {
+    font-size: 0.9rem;
+  }
+
+  .header-next-project {
+    font-size: 0.9rem;
+  }
+
+  .project-gif-title {
+    font-size: 1.4rem;
+  }
+
+  .gif-box {
+    margin-top: 5vw;
+  }
+
+  .project-navbar {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+}

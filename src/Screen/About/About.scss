@@ -1,12 +1,5 @@
 @import '../../index';
 
-@mixin padding($top, $bottom) {
-  padding: {
-    top: $top;
-    bottom: $bottom;
-  }
-}
-
 .about {
   @include layoutCenter($color-whitesmoke, 130px, 130px);
 
