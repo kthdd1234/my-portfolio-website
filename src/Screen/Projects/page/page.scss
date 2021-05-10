@@ -1,5 +1,25 @@
 @import '../../../index.scss';
 
+@mixin directionSetting($direction) {
+  position: absolute;
+  color: gray;
+  font-size: 2rem;
+  top: 40%;
+  #{$direction}: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    color: whitesmoke;
+  }
+}
+
+@mixin logoSetting($width, $radius) {
+  width: $width;
+  border-radius: $radius;
+}
+
 @mixin justifySetting($pos, $justify) {
   position: $pos;
   display: flex;
@@ -15,10 +35,25 @@
     left: 3rem;
   }
 
+  @include media(1750px) {
+    padding: {
+      right: 3.5rem;
+      left: 3.5rem;
+    }
+  }
+
   &-item {
     font-size: 1rem;
     letter-spacing: 2.5px;
     cursor: pointer;
+
+    @include media(1750px) {
+      font-size: 0.8rem;
+    }
+
+    &:hover {
+      color: #1890ff;
+    }
   }
 }
 
@@ -29,14 +64,39 @@
     @include backgroundSetting(60%);
   }
 
+  &-before {
+    @include directionSetting(left);
+  }
+
+  &-next {
+    @include directionSetting(right);
+  }
+
   &-intro {
     position: absolute;
     top: 35%;
 
-    &-head {
-      @include justifySetting(none, space-between);
+    &-large-circle {
+      @include logoSetting(12rem, 300px);
 
-      &-img {
+      @include media(1750px) {
+        width: 11vw;
+      }
+    }
+
+    &-large-round {
+      @include logoSetting(12rem, 0px);
+
+      @include media(1750px) {
+        width: 12vw;
+      }
+    }
+
+    &-small-round {
+      @include logoSetting(3rem, 0px);
+
+      @include media(1750px) {
+        width: 2rem;
       }
     }
 
@@ -47,6 +107,10 @@
         size: 3.6rem;
         weight: 700;
         family: $font-family-mix;
+      }
+
+      @include media(1750px) {
+        font-size: 3.2vw;
       }
 
       &-sf {
@@ -86,114 +150,26 @@
     &-title {
       @include titleSetting();
       color: whitesmoke;
+
+      @include media(1750px) {
+        font-size: 2.2vw;
+      }
+
+      @include media(1250px) {
+        font-size: 1.4rem;
+      }
     }
 
     &-wrap {
       margin-top: 2vw;
 
+      @include media(1250px) {
+        margin-top: 1.5rem;
+      }
+
       &-img {
         border-radius: 5px;
       }
     }
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .learn-more-btn {
-    width: 6rem;
-    height: 2rem;
-    font-size: 0.7rem;
-    font-weight: bold;
-    margin-left: 10px;
-  }
-}
-
-@media screen and (max-width: 1800px) {
-  .projects-desc {
-    font-size: 3rem;
-  }
-  .projects-logo {
-    width: 12rem;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .projects-desc {
-    font-size: 2.5rem;
-  }
-  .projects-logo {
-    width: 12rem;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  .projects-desc {
-    font-size: 2.3rem;
-  }
-  .projects-logo {
-    width: 9rem;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .projects-desc {
-    font-size: 2rem;
-  }
-  .projects-logo {
-    width: 8rem;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .projects-desc {
-    font-size: 1.5rem;
-  }
-  .projects-logo {
-    width: 7rem;
-  }
-  .project-gif-title {
-    font-size: 2.2rem;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .projects-desc {
-    font-size: 1.2rem;
-  }
-  .projects-logo {
-    width: 6rem;
-  }
-  .project-gif-title {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .projects-desc {
-    font-size: 0.9rem;
-  }
-  .projects-logo {
-    width: 5rem;
-  }
-
-  .project-navbar-home {
-    font-size: 0.9rem;
-  }
-
-  .header-next-project {
-    font-size: 0.9rem;
-  }
-
-  .project-gif-title {
-    font-size: 1.4rem;
-  }
-
-  .gif-box {
-    margin-top: 5vw;
-  }
-
-  .project-navbar {
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
   }
 }

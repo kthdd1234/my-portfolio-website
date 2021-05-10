@@ -25,10 +25,11 @@ const project = {
   },
   logo: {
     img: `${s3}/SFCINEMALogo.png`,
-    width: '12rem',
-    radious: '300px',
+    width: 'large',
+    radius: 'circle',
   },
   link: {
+    before: '/projects/sfcinema-web',
     next: '/projects/your-tube',
     more: 'https://github.com/kthdd1234/SF-CINEMA-RN',
   },
@@ -53,7 +54,8 @@ const SFcinemaApp = ({ history }) => {
       <ProjectIntro
         contents={project.contents}
         logo={project.logo}
-        next={project.link.next}
+        link={project.link}
+        history={history}
       />
       <ProjectGIF GIF={project.GIF1} />
       <ProjectGIF GIF={project.GIF2} />

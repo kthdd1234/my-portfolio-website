@@ -25,11 +25,12 @@ const project = {
   },
   logo: {
     img: `${s3}/meet-youLogo(%E1%84%91%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%B5%E1%86%B8).png`,
-    width: '12rem',
-    radious: '0px',
+    width: 'large',
+    radius: 'round',
   },
   link: {
-    next: '/projects/sf-cinema-web',
+    before: '/projects/your-tube',
+    next: '/projects/sfcinema-web',
     more: 'https://github.com/kthdd1234/Meet-You_server/tree/master',
   },
   GIF1: {
@@ -53,7 +54,8 @@ const Meetyou = ({ history }) => {
       <ProjectIntro
         contents={project.contents}
         logo={project.logo}
-        next={project.link.next}
+        link={project.link}
+        history={history}
       />
       <ProjectGIF GIF={project.GIF1} />
       <ProjectGIF GIF={project.GIF2} />

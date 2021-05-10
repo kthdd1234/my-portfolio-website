@@ -7,8 +7,8 @@ import Yourtube from './Screen/Projects/page/pages/Yourtube';
 
 const list = [
   { path: '/', component: Screen },
-  { path: '/projects/sf-cinema-web', component: SFcinemaWeb },
-  { path: '/projects/sf-cinema-app', component: SFcinemaApp },
+  { path: '/projects/sfcinema-web', component: SFcinemaWeb },
+  { path: '/projects/sfcinema-app', component: SFcinemaApp },
   { path: '/projects/meet-you', component: Meetyou },
   { path: '/projects/your-tube', component: Yourtube },
 ];

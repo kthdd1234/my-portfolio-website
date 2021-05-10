@@ -9,7 +9,7 @@ const personalProject = [
     img:
       'https://kimdonghyun-portfolio-image.s3.ap-northeast-2.amazonaws.com/SFCINEMA(Web).png',
     unit: 'Personal Project / Full-Stack',
-    path: 'sf-cinema-web',
+    path: 'sfcinema-web',
   },
   {
     name: 'SF CINEMA [App]',
@@ -17,7 +17,7 @@ const personalProject = [
     img:
       'https://kimdonghyun-portfolio-image.s3.ap-northeast-2.amazonaws.com/SFCINEMA(RN).png',
     unit: 'Personal Project / Full-Stack',
-    path: 'sf-cinema-app',
+    path: 'sfcinema-app',
   },
 ];
 

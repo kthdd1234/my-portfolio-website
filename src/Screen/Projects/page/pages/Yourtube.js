@@ -26,10 +26,11 @@ const project = {
   },
   logo: {
     img: `${s3}/yourtube-small.png`,
-    width: '3rem',
-    radiois: '0px',
+    width: 'small',
+    radius: 'round',
   },
   link: {
+    before: '/projects/sfcinema-app',
     next: '/projects/meet-you',
     more: 'https://github.com/your-tube/client',
   },
@@ -54,7 +55,8 @@ const Yourtube = ({ history }) => {
       <ProjectIntro
         contents={project.contents}
         logo={project.logo}
-        next={project.link.next}
+        link={project.link}
+        history={history}
       />
       <ProjectGIF GIF={project.GIF1} />
       <ProjectGIF GIF={project.GIF2} />

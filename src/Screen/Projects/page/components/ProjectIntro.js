@@ -1,7 +1,9 @@
+import { withRouter } from 'react-router-dom';
 import 'antd/dist/antd.css';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import '../page.css';
 
-const ProjectIntro = ({ contents, logo }) => {
+const ProjectIntro = ({ contents, logo, link, history }) => {
   const list = [
     ['포지션', contents.position],
     ['기간', contents.term],
@@ -15,18 +17,24 @@ const ProjectIntro = ({ contents, logo }) => {
         src={contents.backgroundImg}
         alt='img'
       />
+
+      <div className='project-before' onClick={() => history.push(link.before)}>
+        <LeftOutlined />
+      </div>
+      <div className='project-next' onClick={() => history.push(link.next)}>
+        <RightOutlined />
+      </div>
+
       <div className='project-intro'>
-        <div className='project-intro-head'>
-          <img
-            className='project-intro-head-img'
-            src={logo.img}
-            style={{ width: logo.width, borderRadius: logo.radious }}
-          />
-        </div>
+        <img
+          className={`project-intro-${logo.width}-${logo.radius}`}
+          src={logo.img}
+        />
+
         <div className='project-intro-desc'>{contents.desc}</div>
         <div className='project-intro-contents'>
-          {list.map((data) => (
-            <div className='project-intro-contents-list'>
+          {list.map((data, key) => (
+            <div className='project-intro-contents-list' key={key}>
               <div className='project-intro-contents-list-title'>{data[0]}</div>
               <div className='project-intro-contents-list-stack'>{data[1]}</div>
             </div>
@@ -37,4 +45,4 @@ const ProjectIntro = ({ contents, logo }) => {
   );
 };
 
-export default ProjectIntro;
+export default withRouter(ProjectIntro);
