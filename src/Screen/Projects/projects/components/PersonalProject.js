@@ -1,3 +1,5 @@
+import SFCINEMA_web from '../../../../gallery/SFCINEMA(Web).png';
+import SFCINEMA_app from '../../../../gallery/SFCINEMA(RN).png';
 import React, { useEffect } from 'react';
 import ScreenImage from './ScreenImage';
 import ProjectContents from './ProjectContents';
@@ -6,16 +8,14 @@ const personalProject = [
   {
     name: 'SF CINEMA [Web]',
     kind: 'web',
-    img:
-      'https://kimdonghyun-portfolio-image.s3.ap-northeast-2.amazonaws.com/SFCINEMA(Web).png',
+    img: SFCINEMA_web,
     unit: 'Personal Project / Full-Stack',
     path: 'sfcinema-web',
   },
   {
     name: 'SF CINEMA [App]',
     kind: 'app',
-    img:
-      'https://kimdonghyun-portfolio-image.s3.ap-northeast-2.amazonaws.com/SFCINEMA(RN).png',
+    img: SFCINEMA_app,
     unit: 'Personal Project / Full-Stack',
     path: 'sfcinema-app',
   },

@@ -1,3 +1,7 @@
+import couple from '../../../../gallery/couple.jpg';
+import meetyou_logo from '../../../../gallery/meet-youLogo.png';
+import meetyou_main from '../../../../gallery/meet-you-mainscreen.gif';
+import meetyou_chat from '../../../../gallery/meetyou-chat.gif';
 import ProjectNavBar from '../components/ProjectNavBar';
 import ProjectIntro from '../components/ProjectIntro';
 import ProjectGIF from '../components/ProjectGIF';
@@ -12,19 +16,16 @@ const Desc = () => {
   );
 };
 
-const s3 =
-  'https://kimdonghyun-portfolio-image.s3.ap-northeast-2.amazonaws.com';
-
 const project = {
   contents: {
     position: 'Back-End',
     term: '2020년 6월 1일 ~ 6월 30일',
     stack: 'Node.js • Express • Sequelize',
     desc: <Desc />,
-    backgroundImg: `${s3}/couple.jpg`,
+    backgroundImg: couple,
   },
   logo: {
-    img: `${s3}/meet-youLogo(%E1%84%91%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%B5%E1%86%B8).png`,
+    img: meetyou_logo,
     width: 'large',
     radius: 'round',
   },
@@ -36,13 +37,13 @@ const project = {
   GIF1: {
     width: '20rem',
     title: '메인 화면',
-    gif: `${s3}/meet-you-mainscreen.gif`,
+    gif: meetyou_main,
     backgroundColor: '#202a45',
   },
   GIF2: {
     width: '20rem',
     title: '포인트 사용 및 채팅',
-    gif: `${s3}/meet-you-chat.gif`,
+    gif: meetyou_chat,
     backgroundColor: 'rgb(20, 21, 23)',
   },
 };

@@ -1,11 +1,9 @@
+import my_photo from '../../../gallery/my-photo.jpg';
+
 const MyPhoto = () => {
   return (
     <div className='about-photo'>
-      <img
-        src='https://kimdonghyun-portfolio-image.s3.ap-northeast-2.amazonaws.com/myPhoto.jpg'
-        className='about-photo-img'
-        alt='img'
-      />
+      <img src={my_photo} className='about-photo-img' alt='img' />
     </div>
   );
 };

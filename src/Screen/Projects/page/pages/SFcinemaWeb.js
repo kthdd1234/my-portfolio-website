@@ -1,3 +1,6 @@
+import SFCINEMA from '../../../../gallery/SFCINEMA.png';
+// import sf_web_main from '../../../../gallery/sf-web-main.gif';
+// import sf_web_detail from '../../../../gallery/sf-web-detail.gif';
 import ProjectNavBar from '../components/ProjectNavBar';
 import ProjectIntro from '../components/ProjectIntro';
 import ProjectGIF from '../components/ProjectGIF';
@@ -24,7 +27,7 @@ const project = {
     backgroundImg: `https://image.tmdb.org/t/p/original/pZvZjxPFfWWIwtPQodsNygQ6u5Z.jpg`,
   },
   logo: {
-    img: `${s3}/SFCINEMALogo.png`,
+    img: SFCINEMA,
     width: 'large',
     radius: 'circle',
   },
@@ -36,13 +39,13 @@ const project = {
   GIF1: {
     width: '67.5vw',
     title: '메인 화면',
-    gif: `${s3}/sf-web-main.gif`,
+    gif: '',
     backgroundColor: '#202a45',
   },
   GIF2: {
     width: '67.5vw',
     title: '영화 정보 및 예고편',
-    gif: `${s3}/sf-web-detail.gif`,
+    gif: '',
     backgroundColor: 'rgb(20, 21, 23)',
   },
 };

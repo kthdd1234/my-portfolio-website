@@ -1,3 +1,7 @@
+import yourtube_logo from '../../../../gallery/yourtube-small.png';
+import yourtube_img from '../../../../gallery/youtube-img.jpg';
+import yourtube_login from '../../../../gallery/yourtube-login.gif';
+import yourtube_serach from '../../../../gallery/yourtube-serach.gif';
 import ProjectNavBar from '../components/ProjectNavBar';
 import ProjectIntro from '../components/ProjectIntro';
 import ProjectGIF from '../components/ProjectGIF';
@@ -13,19 +17,16 @@ const Desc = () => {
   );
 };
 
-const s3 =
-  'https://kimdonghyun-portfolio-image.s3.ap-northeast-2.amazonaws.com';
-
 const project = {
   contents: {
     position: 'Front-End',
     term: '2020년 5월 18일 ~ 5월 29일',
     stack: 'HTML • CSS • JS • React',
     desc: <Desc />,
-    backgroundImg: `${s3}/youtube-img.jpg`,
+    backgroundImg: yourtube_img,
   },
   logo: {
-    img: `${s3}/yourtube-small.png`,
+    img: yourtube_logo,
     width: 'small',
     radius: 'round',
   },
@@ -37,13 +38,13 @@ const project = {
   GIF1: {
     width: '45vw',
     title: '로그인 화면',
-    gif: `${s3}/yourtube-login.gif`,
+    gif: yourtube_login,
     backgroundColor: '#202a45',
   },
   GIF2: {
     width: '45vw',
     title: '검색 기능',
-    gif: `${s3}/yourtube-search.gif`,
+    gif: yourtube_serach,
     backgroundColor: 'rgb(20, 21, 23)',
   },
 };

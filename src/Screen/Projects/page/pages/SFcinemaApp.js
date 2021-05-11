@@ -1,3 +1,6 @@
+import SFCINEMA from '../../../../gallery/SFCINEMA.png';
+import sf_app_main from '../../../../gallery/sf-mobile-main.gif';
+import sf_app_detail from '../../../../gallery/sf-mobile-detail.gif';
 import ProjectNavBar from '../components/ProjectNavBar';
 import ProjectIntro from '../components/ProjectIntro';
 import ProjectGIF from '../components/ProjectGIF';
@@ -12,9 +15,6 @@ const Desc = () => {
   );
 };
 
-const s3 =
-  'https://kimdonghyun-portfolio-image.s3.ap-northeast-2.amazonaws.com';
-
 const project = {
   contents: {
     position: 'Full-Stack',
@@ -24,7 +24,7 @@ const project = {
     backgroundImg: `https://image.tmdb.org/t/p/original/orjiB3oUIsyz60hoEqkiGpy5CeO.jpg`,
   },
   logo: {
-    img: `${s3}/SFCINEMALogo.png`,
+    img: SFCINEMA,
     width: 'large',
     radius: 'circle',
   },
@@ -36,13 +36,13 @@ const project = {
   GIF1: {
     width: '20rem',
     title: '메인 화면',
-    gif: `${s3}/sf-mobile-main.gif`,
+    gif: sf_app_main,
     backgroundColor: '#202a45',
   },
   GIF2: {
     width: '20rem',
     title: '영화 정보 및 하단 텝',
-    gif: `${s3}/sf-mobile-detail.gif`,
+    gif: sf_app_detail,
     backgroundColor: 'rgb(20, 21, 23)',
   },
 };
